@@ -30,7 +30,9 @@ internal sealed class Localization
     public string ActionOverlapSoundName { get; set; } = "Overlapping audio";
     public string ActionOverlapSoundDescription { get; set; } = "Play the configured file and overlap other audio";
     public string ActionLoopSoundName { get; set; } = "Looping audio";
+    public string ActionOverlapLoopSoundName { get; set; } = "Overlap looping audio";
     public string ActionLoopSoundDescription { get; set; } = "Play the configured file on loop until it is stopped on second tap";
+    public string ActionOverlapLoopSoundDescription { get; set; } = "Play the configured file on overlap and loop until it is stopped on second tap";
     public string ActionSuggestButtonStates { get; set; } = "Setup of the button's active and inactive states is recommended for this action";
     public string ActionStopSoundName { get; set; } = "Stop all sounds";
     public string ActionStopSoundDescription { get; set; } = "Forces stop of all currently playing sounds";

@@ -92,7 +92,7 @@ namespace Soundboard4MacroDeck.Views
             buttonOK.Text = "Ok";
             buttonOK.UseVisualStyleBackColor = true;
             buttonOK.UseWindowsAccentColor = true;
-            buttonOK.WriteProgress = true;
+            
             buttonOK.Click += ButtonOK_Click;
             // 
             // labelDevices

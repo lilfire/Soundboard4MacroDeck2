@@ -29,6 +29,7 @@ public class Main : MacroDeckPlugin
             new SoundboardPlayAction(),
             new SoundboardPlayStopAction(),
             new SoundboardOverlapAction(),
+            new SoundboardOverlapLoopAction(),
             new SoundboardLoopAction(),
             new SoundboardStopAction(),
             new SoundboardCategoryRandomAction(),

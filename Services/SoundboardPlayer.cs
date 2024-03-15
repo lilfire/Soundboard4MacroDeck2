@@ -75,10 +75,13 @@ public static class SoundboardPlayer
                 break;
 
             case SoundboardActions.Overlap:
-                PlayAudio(actionParameters, actionButton);
+	            PlayOrStop(actionParameters, actionButton);
                 break;
+            case SoundboardActions.OverlapLoop:
+	            PlayOrStop(actionParameters, actionButton, enableLoop: true);
+	            break;
 
-            case SoundboardActions.PlayStop:
+			case SoundboardActions.PlayStop:
                 PlayOrStop(actionParameters, actionButton, useVars: true);
                 break;
 
@@ -116,8 +119,7 @@ public static class SoundboardPlayer
         }
         else
         {
-            StopAll();
-            PlayAudio(actionParameters, actionButton, enableLoop, useVars);
+	        PlayAudio(actionParameters, actionButton, enableLoop, useVars);
         }
     }
 

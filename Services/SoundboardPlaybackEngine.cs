@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NAudio.CoreAudioApi;
 using NAudio.Wave;
 using Soundboard4MacroDeck.Models;
