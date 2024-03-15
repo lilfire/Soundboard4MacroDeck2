@@ -61,7 +61,22 @@ public class SoundboardGlobalConfigViewModel : OutputDeviceConfigurationViewMode
         PluginInstance.DbContext.UpdateAudioCategory(audioCategory);
     }
 
-    public AudioFile GetBytesFromFile(string filePath)
+    internal void DeleteCategory(AudioCategory editedCategory)
+    {
+	    var audioCategory = PluginInstance.DbContext.FindAudioCategory(editedCategory.Id);
+	    audioCategory.Name = editedCategory.Name;
+	    PluginInstance.DbContext.DeleteAudioCategory(audioCategory);
+    }  
+    internal void DeleteAudioFile(AudioFileItem editedItem)
+    {
+
+	    var file = PluginInstance.DbContext.FindAudioFile(editedItem.Id);
+	    file.Name = editedItem.Name;
+	    file.CategoryId = editedItem.CategoryId;
+	    PluginInstance.DbContext.DeleteAudioFile(file);
+	}
+
+	public AudioFile GetBytesFromFile(string filePath)
     {
         byte[] data = null;
         if (SystemIOFile.Exists(filePath))

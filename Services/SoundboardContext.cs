@@ -116,4 +116,13 @@ internal class SoundboardContext
     {
         return Db.Update(audioCategory) > 0;
     }
+
+    public bool DeleteAudioCategory(AudioCategory audioCategory)
+    {
+	    return Db.Delete(audioCategory) > 0;
+    }    
+    public bool DeleteAudioFile(AudioFile audioFile)
+    {
+	    return Db.Delete(audioFile) > 0;
+    }
 }
