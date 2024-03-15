@@ -92,7 +92,7 @@ partial class SoundboardGlobalAudioAddView
         buttonGetFromURL.Text = "Get from URL";
         buttonGetFromURL.UseVisualStyleBackColor = true;
         buttonGetFromURL.UseWindowsAccentColor = true;
-        
+        buttonGetFromURL.WriteProgress = true;
         buttonGetFromURL.Click += ButtonGetFromURL_Click;
         // 
         // fileBrowse
@@ -113,7 +113,7 @@ partial class SoundboardGlobalAudioAddView
         fileBrowse.Text = "Browse";
         fileBrowse.UseVisualStyleBackColor = true;
         fileBrowse.UseWindowsAccentColor = true;
-        
+        fileBrowse.WriteProgress = true;
         fileBrowse.Click += FileBrowse_Click;
         // 
         // labelOr
@@ -146,7 +146,7 @@ partial class SoundboardGlobalAudioAddView
         buttonOK.Text = "Ok";
         buttonOK.UseVisualStyleBackColor = true;
         buttonOK.UseWindowsAccentColor = true;
-        
+        buttonOK.WriteProgress = true;
         buttonOK.Click += ButtonOK_Click;
         // 
         // SoundboardGlobalAudioAddView

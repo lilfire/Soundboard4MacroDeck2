@@ -2,7 +2,7 @@
 using SQLite;
 using SuchByte.MacroDeck.Backups;
 using SuchByte.MacroDeck.Logging;
-
+using SuchByte.MacroDeck.Startup;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -40,10 +40,10 @@ internal class SoundboardContext
     {
         try
         {
-            //PluginInstance.DbContext.Db.Close();
-            //var backup = new DirectoryInfo(ApplicationPaths.BackupsDirectoryPath).EnumerateFiles().OrderByDescending(f => f.CreationTimeUtc).First();
-            //using var archive = ZipFile.Open(backup.FullName, ZipArchiveMode.Update);
-            //archive.CreateEntryFromFile(DbPath, Path.Combine(new DirectoryInfo(ApplicationPaths.PluginsDirectoryPath).Name, Directory.GetParent(PluginDir).Name, "DB", dbFileName));
+            PluginInstance.DbContext.Db.Close();
+            var backup = new DirectoryInfo(ApplicationPaths.BackupsDirectoryPath).EnumerateFiles().OrderByDescending(f => f.CreationTimeUtc).First();
+            using var archive = ZipFile.Open(backup.FullName, ZipArchiveMode.Update);
+            archive.CreateEntryFromFile(DbPath, Path.Combine(new DirectoryInfo(ApplicationPaths.PluginsDirectoryPath).Name, Directory.GetParent(PluginDir).Name, "DB", dbFileName));
         }
         catch (Exception ex)
         {
